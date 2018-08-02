@@ -105,7 +105,8 @@
         }
     </style>
 </head>
-<body>
+<body >
+	<div id="pagecontent">
 	<h2 style="text-align: center" id="headline">杨超 <a href="https://ycjoy.github.io/">ycjoy.github.io</a></h2>
 	<div class="container">
 		<div class="info">
@@ -202,6 +203,25 @@
 			<p>感谢您花时间阅读我的简历，期待有机会与您一起共事。</p>
 		</div>
 		<p class="footer">简历线上地址：ycjoy.github.io</p>
+		
+		
 	</div>
+	</div>
+	<a class="btn btn-default jquery-word-export" href="javascript:void(0)" style="color: aqua">
+	<span class="word-icon">W</span>
+	导出为.doc文档
+	</a>
 </body>
+<script src="./jquery-1.10.2.js"></script><script src="./jquery.min.js"></script>
+<script type="text/javascript" src="./FileSaver.js"></script>
+<script type="text/javascript" src="./jquery.wordexport.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function($) {
+	// http://www.jq22.com/jquery-info11368
+	$("a.jquery-word-export").click(function(event) {
+		$("#pagecontent").wordExport();
+	});
+});
+</script>
+
 </html>
